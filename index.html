@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>FinTrack Pro</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <form action="submit" class="form2">
+      <h1>Welcome Back</h1>
+      <h2>Login to FinTrack Pro</h2>
+
+      <div>
+        <label for="name"
+          >Username<input type="text" class="login-username" required
+        /></label>
+        <label for="password"
+          >Password<input type="password" class="login-password" required
+        /></label>
+      </div>
+
+      <button type="submit" class="btn2">Login</button>
+
+      <p>
+        Don't have an account?
+        <a class="register" href="login.html">Register here</a>
+      </p>
+    </form>
+
+    <form action="submit" class="form1">
+      <h1>Create Account</h1>
+      <h2>Join FinTrack Pro</h2>
+
+      <div>
+        <label for="name"
+          >Choose a Username<input type="text" class="username" required
+        /></label>
+        <label for="password"
+          >Password<input type="password" class="password" required
+        /></label>
+      </div>
+
+      <button type="submit" class="btn1">Register</button>
+
+      <p>
+        Already have an account?
+        <a class="login" href="login.html">Login here</a>
+      </p>
+    </form>
+
+    <div class="dashboard">
+      <aside class="sidebar">
+        <div class="logo">
+          <div class="logo-icon">
+            <i class="fa-solid fa-layer-group"></i>
+          </div>
+
+          <div class="logo-text">
+            <h2>FinTrack Pro</h2>
+            <span>Enterprise Finance</span>
+          </div>
+        </div>
+
+        <nav>
+          <a href="#" class="active">
+            <i class="fa-solid fa-table-cells-large"></i>
+            Dashboard
+          </a>
+
+          <a href="#">
+            <i class="fa-solid fa-gear"></i>
+            Settings
+          </a>
+        </nav>
+
+        <button class="add-btn">
+          <i class="fa-solid fa-plus"></i>
+          Add Transaction
+        </button>
+      </aside>
+
+      <main class="main-content">
+        <header class="page-header">
+          <h1>Financial Overview</h1>
+
+          <p>Real-time tracking application</p>
+        </header>
+
+        <section class="stats-grid">
+          <article class="card">
+            <div class="icon blue">
+              <i class="fa-solid fa-building-columns"></i>
+            </div>
+
+            <h4>Current Balance</h4>
+
+            <h2>-$0.03</h2>
+          </article>
+
+          <article class="card">
+            <div class="icon green">
+              <i class="fa-solid fa-arrow-trend-up"></i>
+            </div>
+
+            <h4>Total Income</h4>
+
+            <h2 class="income">$0.00</h2>
+          </article>
+
+          <article class="card">
+            <div class="icon red">
+              <i class="fa-solid fa-arrow-trend-down"></i>
+            </div>
+
+            <h4>Total Expense</h4>
+
+            <h2 class="expense">$0.03</h2>
+          </article>
+
+          <article class="card">
+            <div class="icon blue">
+              <i class="fa-solid fa-piggy-bank"></i>
+            </div>
+
+            <h4>Total Transactions</h4>
+
+            <h2>1</h2>
+          </article>
+        </section>
+
+        <section class="middle-grid">
+          <div class="chart-card">
+            <h2>Cash Flow Analysis</h2>
+
+            <div class="chart-area">
+              <canvas id="cashChart"></canvas>
+            </div>
+          </div>
+
+          <aside class="preferences">
+            <h2>Preferences</h2>
+
+            <div class="setting-row">
+              <span>Dark Mode</span>
+
+              <label class="switch">
+                <input type="checkbox" checked />
+
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <button class="reset-btn">
+              <i class="fa-solid fa-trash"></i>
+
+              Reset All Data
+            </button>
+          </aside>
+        </section>
+
+        <section class="transactions">
+          <h2>All Transactions</h2>
+
+          <div class="toolbar">
+            <div class="search-box">
+              <i class="fa-solid fa-magnifying-glass"></i>
+
+              <input type="text" placeholder="Search transactions..." />
+            </div>
+
+            <select>
+              <option>All Types</option>
+              <option>Income</option>
+              <option>Expense</option>
+            </select>
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+
+                <th>Description</th>
+
+                <th>Category</th>
+
+                <th>Amount</th>
+
+                <th>Actions</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>2026-06-28</td>
+
+                <td>xxxxxxxxxxxxxxxx</td>
+
+                <td>
+                  <span class="badge"> Food &amp; Dining </span>
+                </td>
+
+                <td class="expense">-$0.03</td>
+
+                <td>
+                  <button class="icon-btn">
+                    <i class="fa-solid fa-pen"></i>
+                  </button>
+
+                  <button class="icon-btn delete">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
