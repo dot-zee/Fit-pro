@@ -285,7 +285,7 @@ nav a i {
 }
 
 .page-header h1 {
-  color: #ffffff;
+  color: #a4a1a1;
   font-size: 38px;
   font-weight: 700;
   margin-bottom: 6px;
@@ -654,4 +654,273 @@ select {
   .toolbar select {
     width: 100%;
   }
+}
+
+.transaction-popup{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.45);
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+.transaction-form{
+    width: 500px;
+    background: white;
+    border-radius: 16px;
+    padding: 28px;
+}
+
+.form-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.form-top h2{
+    font-size: 34px;
+    color: black;
+}
+
+.close-popup{
+    font-size: 38px;
+    cursor: pointer;
+    color: gray;
+}
+
+.transaction-form label{
+    display: block;
+    margin-bottom: 8px;
+    margin-top: 18px;
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+}
+
+.transaction-form input,
+.transaction-form select{
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+.row{
+    display: flex;
+    gap: 20px;
+}
+
+.row div{
+    flex: 1;
+}
+
+.save-btn{
+    width: 100%;
+    margin-top: 30px;
+    padding: 16px;
+    border: none;
+    border-radius: 10px;
+    background: black;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.logout{
+    color: #ef4444;
+}
+
+.logout:hover{
+    background: #2a1a1a;
+    color: #ef4444;
+}
+
+.page-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.logout{
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    background: #ef4444;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logout:hover{
+    background: #dc2626;
+}
+
+.logout i{
+    margin-right: 8px;
+}
+
+.settings-page{
+    display:none;
+    width:100%;
+    padding:35px;
+    background:#0f172a;
+    color:white;
+}
+
+.settings-page h1{
+    font-size:35px;
+    margin-bottom:30px;
+}
+
+.settings-card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:10px;
+    margin-bottom:20px;
+    border:1px solid #334155;
+}
+
+.settings-card h3{
+    margin-bottom:20px;
+}
+
+.setting-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.currency{
+    width:250px;
+    padding:12px;
+    border-radius:8px;
+    border:none;
+    font-size:16px;
+    background:#0f172a;
+    color:white;
+}
+
+.settings-page{
+    display: none;
+    flex: 1;
+    padding: 40px;
+    background: #f8fafc;
+    min-height: 100vh;
+}
+
+.settings-page h1{
+    font-size: 38px;
+    color: #111827;
+    margin-bottom: 30px;
+}
+
+.settings-card{
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.05);
+}
+
+.settings-card h3{
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #111827;
+}
+
+.settings-card label{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.profile-name,
+.currency{
+    width: 100%;
+    max-width: 450px;
+    padding: 14px 18px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 17px;
+    outline: none;
+    transition: .3s;
+    background: white;
+}
+
+.profile-name:focus,
+.currency:focus{
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37,99,235,.15);
+}
+
+.save-settings{
+    padding: 14px 40px;
+    background: #111827;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.save-settings:hover{
+    background: #2563eb;
+    transform: translateY(-2px);
+}
+
+.currency-section {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 30px;
+    margin-top: 25px;
+}
+
+.currency-section h2 {
+    color: #111827;
+    margin-bottom: 20px;
+}
+
+.currency {
+    width: 300px;
+    padding: 12px 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #111827;
+    font-size: 17px;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+}
+
+.currency option {
+    background: #ffffff;
+    color: #111827;
+}
+
+.top-right{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.display-name{
+    font-size:18px;
+    font-weight:600;
 }

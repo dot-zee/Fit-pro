@@ -12,6 +12,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js" defer></script>
   </head>
 
@@ -72,16 +73,16 @@
         </div>
 
         <nav>
-          <a href="#" class="active">
-            <i class="fa-solid fa-table-cells-large"></i>
-            Dashboard
-          </a>
+         <a href="#" class="dashboard-link active">
+        <i class="fa-solid fa-table-cells-large"></i>
+        Dashboard
+        </a>
 
-          <a href="#">
-            <i class="fa-solid fa-gear"></i>
-            Settings
-          </a>
-        </nav>
+        <a href="#" class="settings-link">
+        <i class="fa-solid fa-gear"></i>
+        Settings
+        </a>
+    </nav>
 
         <button class="add-btn">
           <i class="fa-solid fa-plus"></i>
@@ -90,11 +91,23 @@
       </aside>
 
       <main class="main-content">
-        <header class="page-header">
-          <h1>Financial Overview</h1>
+       <header class="page-header">
 
-          <p>Real-time tracking application</p>
-        </header>
+    <div>
+        <h1>Financial Overview</h1>
+        <p>Real-time tracking application</p>
+    </div>
+
+    <div class="top-right">
+    <span class="display-name"></span>
+
+    <button class="logout">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        Logout
+    </button>
+</div>
+
+    </header>
 
         <section class="stats-grid">
           <article class="card">
@@ -104,7 +117,7 @@
 
             <h4>Current Balance</h4>
 
-            <h2>-$0.03</h2>
+            <h2 class="balance">$0.00</h2>
           </article>
 
           <article class="card">
@@ -124,7 +137,7 @@
 
             <h4>Total Expense</h4>
 
-            <h2 class="expense">$0.03</h2>
+            <h2 class="expenses">$0.00</h2>
           </article>
 
           <article class="card">
@@ -134,7 +147,7 @@
 
             <h4>Total Transactions</h4>
 
-            <h2>1</h2>
+            <h2 class="total-transactions">0</h2>
           </article>
         </section>
 
@@ -154,7 +167,7 @@
               <span>Dark Mode</span>
 
               <label class="switch">
-                <input type="checkbox" checked />
+                <input type="checkbox" class="dark-mode" checked />
 
                 <span class="slider"></span>
               </label>
@@ -200,7 +213,7 @@
               </tr>
             </thead>
 
-            <tbody>
+            <tbody class="transaction-body">
               <tr>
                 <td>2026-06-28</td>
 
@@ -210,7 +223,7 @@
                   <span class="badge"> Food &amp; Dining </span>
                 </td>
 
-                <td class="expense">-$0.03</td>
+                <td class="expense">$0.00</td>
 
                 <td>
                   <button class="icon-btn">
@@ -226,6 +239,99 @@
           </table>
         </section>
       </main>
+
+         <section class="settings-page">
+
+    <h1>Settings</h1>
+
+    <div class="settings-card">
+
+        <h3>Profile</h3>
+
+        <label>Username</label>
+
+        <input
+            type="text"
+            class="profile-name"
+            placeholder="Enter your username"
+        >
+
     </div>
+
+    <div class="settings-card">
+
+        <h3>Currency</h3>
+
+        <select class="currency">
+            <option value="$">USD ($)</option>
+            <option value="₹">INR (₹)</option>
+            <option value="€">EUR (€)</option>
+             <option value="£">GBP (£)</option>
+        </select>   
+
+    </div>
+
+    <div class="settings-card">
+
+        <button class="save-settings">
+            Save Changes
+        </button>
+
+    </div>
+
+</section>
+    </div>
+
+    <div class="transaction-popup">
+
+    <form class="transaction-form">
+
+        <div class="form-top">
+            <h2>Add Transaction</h2>
+            <span class="close-popup">&times;</span>
+        </div>
+
+        <label>Type</label>
+        <select class="type">
+            <option>Expense</option>
+            <option>Income</option>
+        </select>
+
+        <label>Description</label>
+        <input
+            type="text"
+            class="description"
+            placeholder="e.g. Amazon, Salary, Coffee"
+        >
+
+        <div class="row">
+
+            <div>
+                <label>Amount</label>
+                <input type="number" class="amount">
+            </div>
+
+            <div>
+                <label>Date</label>
+                <input type="date" class="date">
+            </div>
+
+        </div>
+
+        <label>Category</label>
+        <select class="category">
+            <option>Select a category</option>
+            <option>Food</option>
+            <option>Shopping</option>
+            <option>Salary</option>
+            <option>Transport</option>
+            <option>Entertainment</option>
+        </select>
+
+        <button class="save-btn">Save Transaction</button>
+
+    </form>
+
+</div>
   </body>
 </html>
